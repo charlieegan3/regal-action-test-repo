@@ -1,0 +1,17 @@
+name: PR Check
+
+on: [pull_request]
+
+jobs:
+  generate:
+    name: Generate Code
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v3
+
+      - name: Lint Rego
+        uses: charlieegan3/regal-action@main
+        with:
+          policy_path: 'policy'
+          config_path: '.regal/config.yaml'

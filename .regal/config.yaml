@@ -1,5 +1,4 @@
 rules:
   style:
     todo-comment:
-      # don't report on todo comments
       level: ignore
