@@ -4,7 +4,7 @@ on: [pull_request]
 
 jobs:
   generate:
-    name: Generate Code
+    name: Lint Rego
     runs-on: ubuntu-22.04
     steps:
       - name: Check out code
