@@ -13,7 +13,7 @@ jobs:
       - name: Setup Regal
         uses: StyraInc/setup-regal@main
         with:
-          version: '0.9.0'
+          version: '<0.10.0'
 
       - name: Lint
         run: |
