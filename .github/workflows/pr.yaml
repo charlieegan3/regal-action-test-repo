@@ -10,8 +10,11 @@ jobs:
       - name: Check out code
         uses: actions/checkout@v3
 
-      - name: Lint Rego
-        uses: charlieegan3/regal-action@main
+      - name: Setup Regal
+        uses: StyraInc/setup-regal@main
         with:
-          policy_path: 'policy'
-          config_path: '.regal/config.yaml'
+          version: 'latest'
+
+      - name: Lint
+        run: |
+          regal lint policy/ --format=github
